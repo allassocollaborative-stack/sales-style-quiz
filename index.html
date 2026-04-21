@@ -1334,8 +1334,7 @@ async function sendToAutomation(user, dominant, scores) {
     await fetch(WEBHOOK_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
-      mode: 'no-cors'
+      body: JSON.stringify(payload)
     });
   } catch (e) {
     console.warn('Webhook failed:', e);
